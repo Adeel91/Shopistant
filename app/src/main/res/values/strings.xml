@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ShopistantContent</string>
+
+    <style name="FAB">
+        <item name="android:layout_margin">0dp</item>
+        <item name="fabSize">normal</item>
+        <item name="rippleColor">@android:color/white</item>
+    </style>
+
+    <string name="title_activity_shelfs">ShelfsActivity</string>
+    <string name="product_name">Enter Product Name</string>
+    <string name="txt_product_name">Product Name</string>
+    <string name="txt_product_aisle">Aisle: </string>
+    <string name="txt_product_quntity">Quantity</string>
+    <string name="txt_product_price">Price:</string>
+    <string name="product_price">Enter Product Price</string>
+</resources>

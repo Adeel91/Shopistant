@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "497291791129",
+    "firebase_url": "https://shopistant-f886e.firebaseio.com",
+    "project_id": "shopistant-f886e",
+    "storage_bucket": "shopistant-f886e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:497291791129:android:6a55f45c43747c16",
+        "android_client_info": {
+          "package_name": "com.example.zar.shopistantcontent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "497291791129-afbm5u7e06f1fq6cl59g6kpa0h91i3qo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDss9rS_1oq4gA8HE6HXsO7sv89u11RN60"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
