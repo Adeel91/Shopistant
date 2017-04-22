@@ -56,6 +56,7 @@ public class ShelfsActivity extends AppCompatActivity {
                     bundle.putString("PRICE",product.getPrice());
                     bundle.putInt("QUANTITY",product.getQuantity());
                     bundle.putString("ID",itemId);
+                    bundle.putString("AISLE",aislePosition);
                     DetailsFragment fragment=new DetailsFragment();
                     fragment.setArguments(bundle);
                     getSupportFragmentManager().beginTransaction().replace(R.id.content,fragment).commit();

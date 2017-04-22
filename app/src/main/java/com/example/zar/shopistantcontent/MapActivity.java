@@ -48,76 +48,55 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
     public void onClick(View v){
         switch (v.getId()){
             case R.id.a_01:
-                Intent intent=new Intent(MapActivity.this,ShelfsActivity.class);
-                intent.putExtra("AISLE","a01");
-                startActivity(intent);
+                intent("a01");
                 break;
             case R.id.a_02:
-                Intent intentA02=new Intent(MapActivity.this,ShelfsActivity.class);
-                intentA02.putExtra("AISLE","a02");
-                startActivity(intentA02);
+                intent("a02");
                 break;
             case R.id.a_03:
-                Intent intentA03=new Intent(MapActivity.this,ShelfsActivity.class);
-                intentA03.putExtra("AISLE","a03");
-                startActivity(intentA03);
+                intent("a03");
                 break;
             case R.id.a_04:
-                Intent intentA04=new Intent(MapActivity.this,ShelfsActivity.class);
-                intentA04.putExtra("AISLE","a04");
-                startActivity(intentA04);
+                intent("a04");
                 break;
             case R.id.a_05:
-                Intent intentA05=new Intent(MapActivity.this,ShelfsActivity.class);
-                intentA05.putExtra("AISLE","a05");
-                startActivity(intentA05);
+                intent("a05");
                 break;
             case R.id.a_06:
-                Intent intentA06=new Intent(MapActivity.this,ShelfsActivity.class);
-                intentA06.putExtra("AISLE","a06");
-                startActivity(intentA06);
+                intent("a06");
                 break;
             case R.id.a_07:
-                Intent intentA07=new Intent(MapActivity.this,ShelfsActivity.class);
-                intentA07.putExtra("AISLE","a07");
-                startActivity(intentA07);
+                intent("a07");
                 break;
             case R.id.a_08:
-                Intent intentA08=new Intent(MapActivity.this,ShelfsActivity.class);
-                intentA08.putExtra("AISLE","a08");
-                startActivity(intentA08);
+                intent("a08");
                 break;
             case R.id.a_09:
-                Intent intentA09=new Intent(MapActivity.this,ShelfsActivity.class);
-                intentA09.putExtra("AISLE","a09");
-                startActivity(intentA09);
+                intent("a09");
                 break;
             case  R.id.a_10:
-                Intent intentA10=new Intent(MapActivity.this,ShelfsActivity.class);
-                intentA10.putExtra("AISLE","a10");
-                startActivity(intentA10);
+                intent("a10");
                 break;
             case R.id.a_11:
-                Intent intentA11=new Intent(MapActivity.this,ShelfsActivity.class);
-                intentA11.putExtra("AISLE","a11");
-                startActivity(intentA11);
+                intent("a11");
                 break;
             case R.id.a_12:
-                Intent intentA12=new Intent(MapActivity.this,ShelfsActivity.class);
-                intentA12.putExtra("AISLE","a12");
-                startActivity(intentA12);
+                intent("a12");
                 break;
             case R.id.a_13:
-                Intent intentA13=new Intent(MapActivity.this,ShelfsActivity.class);
-                intentA13.putExtra("AISLE","a13");
-                startActivity(intentA13);
+                intent("a13");
                 break;
             case R.id.a_14:
-                Intent intentA14=new Intent(MapActivity.this,ShelfsActivity.class);
-                intentA14.putExtra("AISLE","a14");
-                startActivity(intentA14);
+                intent("a14");
                 break;
         }
     }
+
+    public void intent(String data){
+        Intent intent=new Intent(MapActivity.this,ShelfsActivity.class);
+        intent.putExtra("AISLE",data);
+        startActivity(intent);
+    }
+
 
 }

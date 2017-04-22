@@ -22,6 +22,7 @@ import java.util.HashMap;
 public class DetailsFragment extends Fragment {
     private  int quantity=0;
     private  String itemId;
+    private String aislePosition;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -30,6 +31,7 @@ public class DetailsFragment extends Fragment {
         String price=getArguments().getString("PRICE");
         quantity=getArguments().getInt("QUANTITY");
         itemId=getArguments().getString("ID");
+        aislePosition=getArguments().getString("AISLE");
 
         final EditText edtName= (EditText) view.findViewById(R.id.fragment_product_name);
         final EditText edtPrice= (EditText) view.findViewById(R.id.fragment_product_price);
@@ -69,9 +71,10 @@ public class DetailsFragment extends Fragment {
                 itemUpdated.put("name",edtName.getText().toString());
                 itemUpdated.put("price",edtPrice.getText().toString());
                 itemUpdated.put("quantity",quantity);
-                DatabaseReference reference= FirebaseDatabase.getInstance().getReference().child("productsByPosition").child(itemId);
-
+                DatabaseReference reference= FirebaseDatabase.getInstance().getReference().child("productsByPosition").child(aislePosition).child(itemId);
+                DatabaseReference allRef=FirebaseDatabase.getInstance().getReference().child("products").child(itemId);
                 reference.updateChildren(itemUpdated);
+                allRef.updateChildren(itemUpdated);
             }
         });
 
