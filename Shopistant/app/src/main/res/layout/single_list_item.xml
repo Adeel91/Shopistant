@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<TextView
+    android:id="@+id/txt_item"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="3"
+    android:text="khuch nahi"
+    android:textSize="21sp"
+    android:padding="10dp"/>
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:src="@mipmap/ic_star"/>
+    <TextView
+        android:id="@+id/txt_rate"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="rate"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:paddingRight="10dp"
+        />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:src="@mipmap/ic_people"/>
+    <TextView
+        android:id="@+id/txt_rated_by"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="rate"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:paddingRight="10dp"/>
+
+
+</LinearLayout>

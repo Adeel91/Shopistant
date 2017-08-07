@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Shopistant</string>
+    <string name="empty_view_title_text">Your Cart Is Empty</string>
+    <string name="empty_view_subtitle_text">Add something to your cart to search it on map</string>
+    <string name="txt_locate">Locate</string>
+    <string name="bought">Bought</string>
+    <string name="remove_item_option">Remove Item</string>
+    <string name="dialog_message_are_you_sure_remove_item">Are you sure you want to remove this item?</string>
+    <string name="search_hint">Search by Category e.g milk</string>
+</resources>

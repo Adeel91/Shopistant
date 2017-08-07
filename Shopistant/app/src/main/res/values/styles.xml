@@ -1,0 +1,40 @@
+<resources>
+
+
+    <style name="AppTheme" parent="AppTheme.Base">
+    </style>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorBackground">@color/background_material_light</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+    </style>
+
+    <style name="Toolbar" parent="Widget.AppCompat.Light.ActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>d
+        <item name="android:textColorPrimary">@android:color/black</item>
+    </style>
+    <style name="ListItemText">
+        <item name="android:textColor">@color/light_black</item>
+        <item name="android:textSize">@dimen/list_item_text_size</item>
+        <item name="android:layout_margin">2dp</item>
+    </style>
+    <style name="Button" parent="Base.TextAppearance.AppCompat.Button">
+        <item name="backgroundTint">@color/colorPrimaryDark</item>
+    </style>
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="CustomTheme.Dialog" parent="Theme.AppCompat.Light.Dialog">
+    </style>
+
+
+
+</resources>
