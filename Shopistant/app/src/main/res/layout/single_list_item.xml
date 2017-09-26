@@ -8,8 +8,8 @@
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:layout_weight="3"
-    android:text="khuch nahi"
-    android:textSize="21sp"
+    android:text="Product Name"
+    android:textSize="16sp"
     android:padding="10dp"/>
 
     <ImageView
@@ -24,24 +24,11 @@
         android:layout_height="wrap_content"
         android:text="rate"
         android:textStyle="bold"
+        android:layout_marginTop="6dp"
         android:textAlignment="textStart"
         android:paddingRight="10dp"
         />
 
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.5"
-        android:src="@mipmap/ic_people"/>
-    <TextView
-        android:id="@+id/txt_rated_by"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="wrap_content"
-        android:text="rate"
-        android:textStyle="bold"
-        android:textAlignment="textStart"
-        android:paddingRight="10dp"/>
 
 
 </LinearLayout>

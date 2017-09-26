@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:focusable="true"
     tools:context="com.example.zar.shopistant.MainActivity">
 
     <android.support.v7.widget.Toolbar
@@ -23,10 +24,22 @@
             android:drawableLeft="@drawable/ic_action_search"
             android:background="@android:color/white"/>
     </android.support.v7.widget.Toolbar>
-
-    <ListView
+    <TextView
+        android:id="@+id/txt_billed"
         android:layout_below="@+id/app_bar"
-        android:padding="@dimen/activity_horizontal_margin"
+        android:text="Amount billed"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:textAlignment="textEnd"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <ListView
+        android:layout_below="@+id/txt_billed"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_horizontal_margin"
         android:id="@+id/list_item"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></ListView>
@@ -39,15 +52,17 @@
         android:layout_centerHorizontal="true"/>
     <RelativeLayout
         android:id="@+id/empty_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center">
 
         <ImageView
             android:id="@+id/empty_cart_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_centerHorizontal="true"
+            android:src="@drawable/logo"
             />
 
         <TextView
@@ -57,7 +72,7 @@
             android:layout_below="@+id/empty_cart_image"
             android:layout_centerHorizontal="true"
             android:fontFamily="sans-serif-medium"
-            android:paddingTop="16dp"
+            android:paddingTop="5dp"
             android:text="@string/empty_view_title_text"
             android:textColor="#717171"
             android:textAppearance="?android:textAppearanceMedium"/>
@@ -81,6 +96,6 @@
         android:layout_alignParentBottom="true"
         style="@style/Button"
         android:text="@string/txt_locate"
-
-        android:onClick="locate"/>
+        android:visibility="invisible"
+        />
 </RelativeLayout>

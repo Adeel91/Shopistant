@@ -35,5 +35,6 @@ dependencies {
     /* For Google Play Services*/
     compile 'com.google.android.gms:play-services-safetynet:10.0.1'
     compile 'com.google.android.gms:play-services-auth:10.0.1'
+
 }
 apply plugin: 'com.google.gms.google-services'

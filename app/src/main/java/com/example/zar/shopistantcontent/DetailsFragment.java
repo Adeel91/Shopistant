@@ -40,7 +40,7 @@ public class DetailsFragment extends Fragment {
         Button btnDec= (Button) view.findViewById(R.id.fragment_btn_decrease);
         Button btnUpdate= (Button) view.findViewById(R.id.fragment_btn_update);
 
-        if (!name.equals("")&&!price.equals("")){
+        if (!name.equals("") && !price.equals("")){
             edtName.setText(name);
             edtPrice.setText(price);
             edtQun.setText(""+quantity);
