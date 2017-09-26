@@ -14,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.zar.shopistant.MainActivity;
 import com.example.zar.shopistant.Utils.Utils;
 import com.example.zar.shopistant.model.Product;
 import com.example.zar.shopistant.R;
@@ -34,7 +35,7 @@ public class ShoppingListAdapter extends ArrayAdapter<Product> {
     private ArrayList<String> keys;
     private SharedPreferences mPreferences;
     private SharedPreferences.Editor mEditor;
-    Context mContext;
+    Activity mContext;
 
     public ShoppingListAdapter(Activity context, ArrayList<Product> shoppingList, ArrayList<String> keys){
         super(context,0,shoppingList);
@@ -54,7 +55,19 @@ public class ShoppingListAdapter extends ArrayAdapter<Product> {
         Product item=getItem(position);
         Log.e(TAG,item.getPrice());
         TextView itemName= (TextView) listItemView.findViewById(R.id.text_view_active_list_item_name);
-        itemName.setText(item.getName());
+        char[] array=item.getName().toCharArray();
+        int count=0;
+
+        for (int i=0; i<array.length; i++) {
+            String current=""+array[i];
+            if (current.equals(" ")) {
+                count=i;
+                break;
+            }
+
+        }
+
+        itemName.setText(item.getName().substring(count));
         TextView itemPrice= (TextView) listItemView.findViewById(R.id.text_view_price);
         itemPrice.setText("Rs. "+item.getPrice());
         ImageButton buttonRemoveItem=(ImageButton) listItemView.findViewById(R.id.button_remove_item);
@@ -68,7 +81,8 @@ public class ShoppingListAdapter extends ArrayAdapter<Product> {
                         .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                            removeItem(position);
+
+                                removeItem(position);
                             }
                         })
                         .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
@@ -93,7 +107,7 @@ public class ShoppingListAdapter extends ArrayAdapter<Product> {
         mUtils.addArrayListToSf(shoppingList);
         mUtils.addStringArrayListSF(keys);
         notifyDataSetChanged();
+        ((MainActivity)mContext).onDataChanged(mContext);
     }
-
 
 }

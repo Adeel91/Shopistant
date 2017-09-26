@@ -24,6 +24,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.File;
+import java.util.HashMap;
+import java.util.Objects;
 
 public class ShelfsActivity extends AppCompatActivity {
     private static final String TAG = "ShelfsActivity";
@@ -93,7 +95,7 @@ public class ShelfsActivity extends AppCompatActivity {
         increase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (quantityInt<=10){
+                if (quantityInt <= 10) {
                     quantityInt++;
                     quantity.setText(""+quantityInt);
                 }
@@ -102,7 +104,7 @@ public class ShelfsActivity extends AppCompatActivity {
         decrease.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (quantityInt>0){
+                if (quantityInt > 0) {
                     quantityInt--;
                     quantity.setText(""+quantityInt);
                 }
@@ -113,8 +115,11 @@ public class ShelfsActivity extends AppCompatActivity {
         alertDialog.setPositiveButton("Add", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                if (!name.getText().toString().equals("")&&!price.getText().toString().equals("")){
-                    Product product=new Product(name.getText().toString(),quantityInt,aislePosition,price.getText().toString());
+                if (!name.getText().toString().equals("") && !price.getText().toString().equals("")){
+                    HashMap<String,Object> rating=new HashMap<String, Object>();
+                    rating.put("rating",0);
+                    rating.put("ratedByNum",0);
+                    Product product=new Product(name.getText().toString(),quantityInt,aislePosition,price.getText().toString(),rating);
                     DatabaseReference pushRef=databaseRef.push();
                     String key=pushRef.getKey();
                     DatabaseReference allRef=FirebaseDatabase.getInstance().getReference().child("products").child(key);

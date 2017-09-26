@@ -1,9 +1,13 @@
 package com.example.zar.shopistant.Utils;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.util.Log;
 import com.example.zar.shopistant.model.Product;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
@@ -21,6 +25,23 @@ public class Utils {
     private static final String TAG = "Utils";
     public Utils(Context mContext) {
         this.mContext=mContext;
+    }
+
+    private static FirebaseDatabase mDatabase;
+    public static FirebaseDatabase getDatabase() {
+        if (mDatabase == null) {
+            mDatabase = FirebaseDatabase.getInstance();
+            mDatabase.setPersistenceEnabled(true); // keeps firebase database offline on cache
+        }
+        return mDatabase;
+    }
+
+    public static boolean checkNetwork(Activity activity) {
+        ConnectivityManager cm=(ConnectivityManager)activity.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+        boolean isConnected = activeNetwork != null &&
+                activeNetwork.isConnected();
+        return isConnected;
     }
 
     public ArrayList<Product> getArrayListFromSf() {

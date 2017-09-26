@@ -1,6 +1,7 @@
 package com.example.zar.shopistant.Adapters;
 
 import android.app.Activity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Filter;
 import android.widget.Filterable;
@@ -25,14 +26,11 @@ public class SearchListAdapter extends FirebaseListAdapter<Product> implements F
     protected void populateView(View v, Product model, int position) {
         TextView textView= (TextView) v.findViewById(R.id.txt_item);
         final TextView rate= (TextView) v.findViewById(R.id.txt_rate);
-        final TextView people= (TextView) v.findViewById(R.id.txt_rated_by);
         HashMap<String,Object> mapRate=model.getRating();
         String rateString=mapRate.get("rating").toString();
         String rateByNum=mapRate.get("ratedByNum").toString();
-        rate.setText(rateString);
-        people.setText(rateByNum);
+        rate.setText(rateString+"/"+rateByNum);
         textView.setText(model.getName());
-
     }
 
 

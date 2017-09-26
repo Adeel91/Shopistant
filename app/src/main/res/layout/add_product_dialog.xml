@@ -25,7 +25,7 @@
            android:text="-"
            android:textSize="17sp"
            android:textColor="@android:color/white"
-           android:backgroundTint="@color/colorAccent"
+           style="@style/Button"
            android:textStyle="bold"/>
        <EditText
            android:id="@+id/add_dialog_edt_product_qunatitiy"
@@ -41,7 +41,7 @@
            android:textStyle="bold"
            android:textSize="17sp"
            android:textColor="@android:color/white"
-           android:backgroundTint="@color/colorAccent"/>
+           style="@style/Button"/>
    </LinearLayout>
 
 </LinearLayout>
