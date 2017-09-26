@@ -196,7 +196,9 @@ public class MapActivity extends AppCompatActivity {
                     }
                     a14.setVisibility(View.VISIBLE);
                     break;
-
+                default:
+                    Log.e(TAG,"default switch aisle");
+                    break;
             }
         }
     }
@@ -404,6 +406,9 @@ public class MapActivity extends AppCompatActivity {
             case 2:
                 rightPathPoints(185);
                 break;
+            default:
+                Log.e(TAG,"default switch");
+                break;
         }
     }
 
@@ -434,6 +439,9 @@ public class MapActivity extends AppCompatActivity {
                 break;
             case 8:
                 leftPathPoints(125);
+                break;
+            default:
+                Log.e(TAG,"default switch");
                 break;
         }
     }

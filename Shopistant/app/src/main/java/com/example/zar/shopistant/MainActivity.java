@@ -89,6 +89,8 @@ public class MainActivity extends AppCompatActivity {
         switch (id){
             case R.id.product_translation:
                 return true;
+            default:
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
